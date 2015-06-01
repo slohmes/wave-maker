@@ -1,0 +1,16 @@
+var myX=0;
+var a = random(2,8);
+var offsetDown = 10;
+
+draw = function() {
+     fill(0, 25, 214);
+     noStroke();
+     rect(myX, a*sin((myX*5)%360)+offsetDown,1,1);
+     
+     myX+=1;
+     if (myX===400){
+        offsetDown += 10;
+        myX = 0;
+        a = random(1,8);
+     }
+};
